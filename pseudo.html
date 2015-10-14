@@ -1,0 +1,80 @@
+<html>
+<head>
+  <style>
+  body {
+    background-color: #22a2bf;
+  }
+
+  nav a {
+    font-family: verdana;
+  	position: relative;
+  	display: inline-block;
+  	margin: 15px 25px;
+  	outline: none;
+  	color: #fff;
+  	text-decoration: none;
+  	text-transform: uppercase;
+  	letter-spacing: 1px;
+  	font-weight: 400;
+  	text-shadow: 0 0 1px rgba(255,255,255,0.3);
+  	font-size: 1.35em;
+  }
+
+  nav a:hover,
+  nav a:focus {
+  	outline: none;
+  }
+  .content {
+    padding: 50px;
+    width: 300px;
+    height: 50px;
+  }
+  .pseudo a {
+  	margin: 0 10px;
+  	padding: 10px 20px;
+  }
+
+  .pseudo a::before {
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+  	width: 100%;
+  	height: 2px;
+  	background: #fff;
+  	content: '';
+  	-webkit-transition: top 0.3s;
+  	-moz-transition: top 0.3s;
+  	transition: top 0.3s;
+  }
+
+  .pseudo a::after {
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+  	width: 2px;
+  	height: 2px;
+  	background: #fff;
+  	content: '';
+  	-webkit-transition: height 0.3s;
+  	-moz-transition: height 0.3s;
+  	transition: height 0.3s;
+  }
+
+  .pseudo a:hover::before {
+  	top: 100%;
+  	opacity: 1;
+  }
+
+  .pseudo a:hover::after {
+  	height: 100%;
+  }
+  </style>
+</head>
+<body>
+  <section class="content">
+    <nav class="pseudo">
+      <a href="#">Nick Carter</a>
+    </nav>
+  </section>
+</body>
+</html>
