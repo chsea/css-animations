@@ -1,0 +1,92 @@
+<html>
+<head>
+  <style>
+    body {
+      background-color: #6fb662;
+    }
+
+    .content {
+      width: 1000px;
+      height: 50px;
+    }
+
+    nav a {
+      font-family: verdana;
+      position: relative;
+      display: inline-block;
+      margin: 15px 0;
+      outline: none;
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 400;
+      text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+      font-size: 1.35em;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      outline: none;
+    }
+
+    .data {
+      position: relative;
+      z-index: 1;
+    }
+
+    .data a {
+      overflow: hidden;
+      margin: 0 15px;
+    }
+
+    .data a span {
+      display: block;
+      padding: 10px 20px;
+      background: #0f7c67;
+      -webkit-transition: -webkit-transform 0.3s;
+      -moz-transition: -moz-transform 0.3s;
+      transition: transform 0.3s;
+    }
+
+    .data a::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      padding: 10px 20px;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      color: #0f7c67;
+      content: attr(data-hover);
+      -webkit-transition: -webkit-transform 0.3s;
+      -moz-transition: -moz-transform 0.3s;
+      transition: transform 0.3s;
+      -webkit-transform: translateX(-25%);
+    }
+
+    .data a:hover span,
+    .data a:focus span {
+      -webkit-transform: translateX(100%);
+      -moz-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+
+    .data a:hover::before,
+    .data a:focus::before {
+      -webkit-transform: translateX(0%);
+      -moz-transform: translateX(0%);
+      transform: translateX(0%);
+    }
+  </style>
+</head>
+
+<body>
+  <section class="content">
+    <nav class="data">
+      <a href="#" data-hover="Go!"><span>Ready?</span></a>
+    </nav>
+  </section>
+</body>
+</html>
